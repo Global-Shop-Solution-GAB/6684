@@ -1,0 +1,1380 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.F_DIOT_INFO..Create(BaseForm)
+Gui.F_DIOT_INFO..Caption("DIOT - INFORMACION DE INDENTIFICADOR DEL PROVEEDOR O TERCERO")
+Gui.F_DIOT_INFO..Size(8595,6405)
+Gui.F_DIOT_INFO..MinX(0)
+Gui.F_DIOT_INFO..MinY(0)
+Gui.F_DIOT_INFO..Position(0,0)
+Gui.F_DIOT_INFO..AlwaysOnTop(False)
+Gui.F_DIOT_INFO..FontName("Tahoma")
+Gui.F_DIOT_INFO..FontSize(8.25)
+Gui.F_DIOT_INFO..ControlBox(True)
+Gui.F_DIOT_INFO..MaxButton(True)
+Gui.F_DIOT_INFO..MinButton(True)
+Gui.F_DIOT_INFO..MousePointer(0)
+Gui.F_DIOT_INFO..Moveable(True)
+Gui.F_DIOT_INFO..Sizeable(True)
+Gui.F_DIOT_INFO..ShowInTaskBar(True)
+Gui.F_DIOT_INFO..TitleBar(True)
+Gui.F_DIOT_INFO..Event(UnLoad,UNLOAD)
+Gui.F_DIOT_INFO.txtTipoTercero.Create(TextBox,"",True,3000,300,0,3120,660,True,2,"Tahoma",8.25,,1)
+Gui.F_DIOT_INFO.txtTipoTercero.Locked(True)
+Gui.F_DIOT_INFO.lblTipoTercero.Create(Label,"Tipo de Tercero",True,1380,240,0,720,660,True,0,"Tahoma",10,,0,0)
+Gui.F_DIOT_INFO.lblTipoTercero.BorderStyle(0)
+Gui.F_DIOT_INFO.cmdTipoTercero.Create(Button)
+Gui.F_DIOT_INFO.cmdTipoTercero.Enabled(True)
+Gui.F_DIOT_INFO.cmdTipoTercero.Visible(True)
+Gui.F_DIOT_INFO.cmdTipoTercero.Zorder(0)
+Gui.F_DIOT_INFO.cmdTipoTercero.Size(300,300)
+Gui.F_DIOT_INFO.cmdTipoTercero.Position(6405,660)
+Gui.F_DIOT_INFO.cmdTipoTercero.Caption("^")
+Gui.F_DIOT_INFO.cmdTipoTercero.FontName("Tahoma")
+Gui.F_DIOT_INFO.cmdTipoTercero.FontSize(8.25)
+Gui.F_DIOT_INFO.cmdTipoTercero.Event(Click,cmdTipoTercero_Click)
+Gui.F_DIOT_INFO.txtTipoOp.Create(TextBox,"",True,3000,300,0,3120,1110,True,2,"Tahoma",8.25,,1)
+Gui.F_DIOT_INFO.txtTipoOp.Locked(True)
+Gui.F_DIOT_INFO.lblTipoOp.Create(Label,"Tipo de Operacion",True,1575,240,0,720,1110,True,0,"Tahoma",10,,0,0)
+Gui.F_DIOT_INFO.lblTipoOp.BorderStyle(0)
+Gui.F_DIOT_INFO.cmdTipoOp.Create(Button)
+Gui.F_DIOT_INFO.cmdTipoOp.Enabled(True)
+Gui.F_DIOT_INFO.cmdTipoOp.Visible(True)
+Gui.F_DIOT_INFO.cmdTipoOp.Zorder(0)
+Gui.F_DIOT_INFO.cmdTipoOp.Size(300,300)
+Gui.F_DIOT_INFO.cmdTipoOp.Position(6405,1110)
+Gui.F_DIOT_INFO.cmdTipoOp.Caption("^")
+Gui.F_DIOT_INFO.cmdTipoOp.FontName("Tahoma")
+Gui.F_DIOT_INFO.cmdTipoOp.FontSize(8.25)
+Gui.F_DIOT_INFO.cmdTipoOp.Event(Click,cmdTipoOp_Click)
+Gui.F_DIOT_INFO.lblRFC.Create(Label,"RFC",True,345,240,0,720,1605,True,0,"Tahoma",10,,0,0)
+Gui.F_DIOT_INFO.lblRFC.BorderStyle(0)
+Gui.F_DIOT_INFO.txtRFC.Create(TextBox,"",True,3000,300,0,3120,1575,True,2,"Tahoma",8.25,,1)
+Gui.F_DIOT_INFO.txtRFC.MaxLength(16)
+Gui.F_DIOT_INFO.lblIDFisc.Create(Label,"Numero de ID Fiscal",True,1725,240,0,720,2115,True,0,"Tahoma",10,,0,0)
+Gui.F_DIOT_INFO.lblIDFisc.BorderStyle(0)
+Gui.F_DIOT_INFO.txtIDFisc.Create(TextBox,"",True,3000,300,0,3120,2115,True,2,"Tahoma",8.25,,1)
+Gui.F_DIOT_INFO.lblINac.Create(Label,"Nacionalidad",True,1080,240,0,720,3555,True,0,"Tahoma",10,,0,0)
+Gui.F_DIOT_INFO.lblINac.BorderStyle(0)
+Gui.F_DIOT_INFO.txtNac.Create(TextBox,"",True,3000,300,0,3120,3555,True,2,"Tahoma",8.25,,1)
+Gui.F_DIOT_INFO.txtNExt.Create(TextBox,"",True,3000,300,0,3120,2610,True,2,"Tahoma",8.25,,1)
+Gui.F_DIOT_INFO.lblNExt.Create(Label,"Nombre del Extranjero",True,1935,240,0,720,2610,True,0,"Tahoma",10,,0,0)
+Gui.F_DIOT_INFO.lblNExt.BorderStyle(0)
+Gui.F_DIOT_INFO.txtPais.Create(TextBox,"",True,3000,300,0,3120,3075,True,2,"Tahoma",8.25,,1)
+Gui.F_DIOT_INFO.lblPais.Create(Label,"Pais de Residencia",True,1590,240,0,720,3075,True,0,"Tahoma",10,,0,0)
+Gui.F_DIOT_INFO.lblPais.BorderStyle(0)
+Gui.F_DIOT_INFO.cmdSave.Create(Button)
+Gui.F_DIOT_INFO.cmdSave.Enabled(True)
+Gui.F_DIOT_INFO.cmdSave.Visible(True)
+Gui.F_DIOT_INFO.cmdSave.Zorder(0)
+Gui.F_DIOT_INFO.cmdSave.Size(1845,495)
+Gui.F_DIOT_INFO.cmdSave.Position(5445,4635)
+Gui.F_DIOT_INFO.cmdSave.Caption("GUARDAR")
+Gui.F_DIOT_INFO.cmdSave.FontName("Tahoma")
+Gui.F_DIOT_INFO.cmdSave.FontSize(10)
+Gui.F_DIOT_INFO.cmdSave.Event(Click,cmdSave_Click)
+Gui.F_DIOT_INFO.lblVendor.Create(Label,"Proveedor",True,870,240,0,225,180,True,0,"Tahoma",10,,0,0)
+Gui.F_DIOT_INFO.lblVendor.BorderStyle(0)
+Gui.F_DIOT_INFO.txtVendor.Create(TextBox,"",True,1425,300,0,1365,135,True,2,"Tahoma",8.25,,1)
+Gui.F_DIOT_INFO.txtVendor.Locked(True)
+Gui.F_DIOT_INFO.cmdDelete.Create(Button)
+Gui.F_DIOT_INFO.cmdDelete.Enabled(True)
+Gui.F_DIOT_INFO.cmdDelete.Visible(True)
+Gui.F_DIOT_INFO.cmdDelete.Zorder(0)
+Gui.F_DIOT_INFO.cmdDelete.Size(1845,495)
+Gui.F_DIOT_INFO.cmdDelete.Position(3420,4635)
+Gui.F_DIOT_INFO.cmdDelete.Caption("LIMPIAR")
+Gui.F_DIOT_INFO.cmdDelete.FontName("Tahoma")
+Gui.F_DIOT_INFO.cmdDelete.FontSize(10)
+Gui.F_DIOT_INFO.cmdDelete.Event(Click,cmdDelete_Click)
+Gui.F_DIOT_INFO.cmdVendBrowser.Create(Button)
+Gui.F_DIOT_INFO.cmdVendBrowser.Enabled(True)
+Gui.F_DIOT_INFO.cmdVendBrowser.Visible(False)
+Gui.F_DIOT_INFO.cmdVendBrowser.Zorder(0)
+Gui.F_DIOT_INFO.cmdVendBrowser.Size(345,345)
+Gui.F_DIOT_INFO.cmdVendBrowser.Position(2910,120)
+Gui.F_DIOT_INFO.cmdVendBrowser.Caption("^")
+Gui.F_DIOT_INFO.cmdVendBrowser.FontName("Tahoma")
+Gui.F_DIOT_INFO.cmdVendBrowser.FontSize(8.25)
+Gui.F_DIOT_INFO.cmdVendBrowser.Event(Click,cmdVendBrowser_Click)
+Gui.F_SelectCheckDate..Create(BaseForm)
+Gui.F_SelectCheckDate..Caption("Selecciona Rango de Fecha del Reporte")
+Gui.F_SelectCheckDate..Size(6900,3420)
+Gui.F_SelectCheckDate..MinX(0)
+Gui.F_SelectCheckDate..MinY(0)
+Gui.F_SelectCheckDate..Position(0,0)
+Gui.F_SelectCheckDate..BackColor(-2147483633)
+Gui.F_SelectCheckDate..MousePointer(0)
+Gui.F_SelectCheckDate..Event(UnLoad,UnLoad)
+Gui.F_SelectCheckDate..AlwaysOnTop(False)
+Gui.F_SelectCheckDate..FontName("Tahoma")
+Gui.F_SelectCheckDate..FontSize(8.25)
+Gui.F_SelectCheckDate..ControlBox(True)
+Gui.F_SelectCheckDate..MaxButton(True)
+Gui.F_SelectCheckDate..MinButton(True)
+Gui.F_SelectCheckDate..Moveable(True)
+Gui.F_SelectCheckDate..Sizeable(True)
+Gui.F_SelectCheckDate..ShowInTaskBar(True)
+Gui.F_SelectCheckDate..TitleBar(True)
+Gui.F_SelectCheckDate.lbl1.Create(Label,"De fecha",True,1455,255,0,540,600,True,0,"Arial",10,-2147483633,0,0)
+Gui.F_SelectCheckDate.lbl1.BorderStyle(0)
+Gui.F_SelectCheckDate.dtpFrom.Create(DatePicker)
+Gui.F_SelectCheckDate.dtpFrom.Size(1935,285)
+Gui.F_SelectCheckDate.dtpFrom.Position(2070,540)
+Gui.F_SelectCheckDate.dtpFrom.Enabled(True)
+Gui.F_SelectCheckDate.dtpFrom.Visible(True)
+Gui.F_SelectCheckDate.dtpFrom.Zorder(0)
+Gui.F_SelectCheckDate.dtpFrom.CheckBox(False)
+Gui.F_SelectCheckDate.dtpFrom.FontName("Tahoma")
+Gui.F_SelectCheckDate.dtpFrom.FontSize(8.25)
+Gui.F_SelectCheckDate.cmdLoad.Create(Button)
+Gui.F_SelectCheckDate.cmdLoad.Size(1095,450)
+Gui.F_SelectCheckDate.cmdLoad.Position(3570,1950)
+Gui.F_SelectCheckDate.cmdLoad.Caption("Generar")
+Gui.F_SelectCheckDate.cmdLoad.FontSize(10)
+Gui.F_SelectCheckDate.cmdLoad.Event(Click,cmdLoad_Click)
+Gui.F_SelectCheckDate.cmdLoad.Enabled(True)
+Gui.F_SelectCheckDate.cmdLoad.Visible(True)
+Gui.F_SelectCheckDate.cmdLoad.Zorder(0)
+Gui.F_SelectCheckDate.cmdLoad.FontName("Tahoma")
+Gui.F_SelectCheckDate.dtpTo.Create(DatePicker)
+Gui.F_SelectCheckDate.dtpTo.Size(1935,285)
+Gui.F_SelectCheckDate.dtpTo.Position(2070,1260)
+Gui.F_SelectCheckDate.dtpTo.Enabled(True)
+Gui.F_SelectCheckDate.dtpTo.Visible(True)
+Gui.F_SelectCheckDate.dtpTo.Zorder(0)
+Gui.F_SelectCheckDate.dtpTo.CheckBox(False)
+Gui.F_SelectCheckDate.dtpTo.FontName("Tahoma")
+Gui.F_SelectCheckDate.dtpTo.FontSize(8.25)
+Gui.F_SelectCheckDate.lbl2.Create(Label,"A fecha ",True,1455,255,0,540,1320,True,0,"Arial",10,-2147483633,0,0)
+Gui.F_SelectCheckDate.lbl2.BorderStyle(0)
+Gui.F_PREDIOT..Create(BaseForm)
+Gui.F_PREDIOT..Caption("PRE DETALLE DIOT")
+Gui.F_PREDIOT..Size(20445,12420)
+Gui.F_PREDIOT..MinX(18090)
+Gui.F_PREDIOT..MinY(11010)
+Gui.F_PREDIOT..Position(0,0)
+Gui.F_PREDIOT..BackColor(-2147483633)
+Gui.F_PREDIOT..MousePointer(0)
+Gui.F_PREDIOT..Event(UnLoad,F_PREDIOT_UnLoad)
+Gui.F_PREDIOT..AlwaysOnTop(False)
+Gui.F_PREDIOT..FontName("Tahoma")
+Gui.F_PREDIOT..FontSize(8.25)
+Gui.F_PREDIOT..ControlBox(True)
+Gui.F_PREDIOT..MaxButton(True)
+Gui.F_PREDIOT..MinButton(True)
+Gui.F_PREDIOT..Moveable(True)
+Gui.F_PREDIOT..Sizeable(True)
+Gui.F_PREDIOT..ShowInTaskBar(True)
+Gui.F_PREDIOT..TitleBar(True)
+Gui.F_PREDIOT.cmdExportCSV.Create(Button)
+Gui.F_PREDIOT.cmdExportCSV.Size(1395,375)
+Gui.F_PREDIOT.cmdExportCSV.Position(16410,60)
+Gui.F_PREDIOT.cmdExportCSV.Caption("Exportar CSV")
+Gui.F_PREDIOT.cmdExportCSV.Event(Click,cmdExport_Click)
+Gui.F_PREDIOT.cmdExportCSV.Enabled(True)
+Gui.F_PREDIOT.cmdExportCSV.Visible(True)
+Gui.F_PREDIOT.cmdExportCSV.Zorder(0)
+Gui.F_PREDIOT.cmdExportCSV.FontName("Tahoma")
+Gui.F_PREDIOT.cmdExportCSV.FontSize(8.25)
+Gui.F_PREDIOT.GsGridDIOT.Create(GsGridControl)
+Gui.F_PREDIOT.GsGridDIOT.Size(20145,11280)
+Gui.F_PREDIOT.GsGridDIOT.Position(225,645)
+Gui.F_PREDIOT.GsGridDIOT.Enabled(True)
+Gui.F_PREDIOT.GsGridDIOT.Visible(True)
+Gui.F_PREDIOT.GsGridDIOT.Zorder(0)
+Gui.F_PREDIOT.cmdExportTXT.Create(Button)
+Gui.F_PREDIOT.cmdExportTXT.Enabled(True)
+Gui.F_PREDIOT.cmdExportTXT.Visible(False)
+Gui.F_PREDIOT.cmdExportTXT.Zorder(0)
+Gui.F_PREDIOT.cmdExportTXT.Size(1395,375)
+Gui.F_PREDIOT.cmdExportTXT.Position(14805,75)
+Gui.F_PREDIOT.cmdExportTXT.Caption("Exportar TXT")
+Gui.F_PREDIOT.cmdExportTXT.FontName("Tahoma")
+Gui.F_PREDIOT.cmdExportTXT.FontSize(8.25)
+Gui.F_PREDIOT.cmdExportTXT.Event(Click,cmdExportTXT_Click)
+Gui.F_MantCRDIOT..Create(BaseForm)
+Gui.F_MantCRDIOT..Caption("Mantenimiento Cuentas Contables")
+Gui.F_MantCRDIOT..Size(7260,5250)
+Gui.F_MantCRDIOT..MinX(0)
+Gui.F_MantCRDIOT..MinY(0)
+Gui.F_MantCRDIOT..Position(0,0)
+Gui.F_MantCRDIOT..AlwaysOnTop(False)
+Gui.F_MantCRDIOT..FontName("Tahoma")
+Gui.F_MantCRDIOT..FontSize(8.25)
+Gui.F_MantCRDIOT..ControlBox(True)
+Gui.F_MantCRDIOT..MaxButton(True)
+Gui.F_MantCRDIOT..MinButton(True)
+Gui.F_MantCRDIOT..MousePointer(0)
+Gui.F_MantCRDIOT..Moveable(True)
+Gui.F_MantCRDIOT..Sizeable(True)
+Gui.F_MantCRDIOT..ShowInTaskBar(True)
+Gui.F_MantCRDIOT..TitleBar(True)
+Gui.F_MantCRDIOT..Event(UnLoad,UNLOAD)
+Gui.F_MantCRDIOT.lblISR10.Create(Label,"IVA 16 %",True,690,195,0,285,900,True,0,"Tahoma",8.25,,0,0)
+Gui.F_MantCRDIOT.lblISR10.BorderStyle(0)
+Gui.F_MantCRDIOT.cmdIVA.Create(Button)
+Gui.F_MantCRDIOT.cmdIVA.Enabled(True)
+Gui.F_MantCRDIOT.cmdIVA.Visible(True)
+Gui.F_MantCRDIOT.cmdIVA.Zorder(0)
+Gui.F_MantCRDIOT.cmdIVA.Size(345,345)
+Gui.F_MantCRDIOT.cmdIVA.Position(4515,870)
+Gui.F_MantCRDIOT.cmdIVA.Caption("^")
+Gui.F_MantCRDIOT.cmdIVA.FontName("Tahoma")
+Gui.F_MantCRDIOT.cmdIVA.FontSize(8.25)
+Gui.F_MantCRDIOT.cmdIVA.Event(Click,cmdIVA_Click)
+Gui.F_MantCRDIOT.txtIVA.Create(TextBox,"",True,1500,300,0,2850,870,True,0,"Tahoma",8.25,,1)
+Gui.F_MantCRDIOT.txtIVA.Locked(True)
+Gui.F_MantCRDIOT.lblGLAcct.Create(Label,"IVA 4%",True,555,195,0,285,1395,True,0,"Tahoma",8.25,,0,0)
+Gui.F_MantCRDIOT.lblGLAcct.BorderStyle(0)
+Gui.F_MantCRDIOT.txtIVA2.Create(TextBox,"",True,1500,300,0,2850,1365,True,0,"Tahoma",8.25,,1)
+Gui.F_MantCRDIOT.txtIVA2.Locked(True)
+Gui.F_MantCRDIOT.cmdSaveCC.Create(Button)
+Gui.F_MantCRDIOT.cmdSaveCC.Enabled(True)
+Gui.F_MantCRDIOT.cmdSaveCC.Visible(True)
+Gui.F_MantCRDIOT.cmdSaveCC.Zorder(0)
+Gui.F_MantCRDIOT.cmdSaveCC.Size(1770,390)
+Gui.F_MantCRDIOT.cmdSaveCC.Position(4650,4125)
+Gui.F_MantCRDIOT.cmdSaveCC.Caption("Guardar")
+Gui.F_MantCRDIOT.cmdSaveCC.FontName("Tahoma")
+Gui.F_MantCRDIOT.cmdSaveCC.FontSize(12)
+Gui.F_MantCRDIOT.cmdSaveCC.Event(Click,cmdSaveCC_Click)
+Gui.F_MantCRDIOT.lblGLAcct2.Create(Label,"IVA 10.66%",True,885,195,0,285,1845,True,0,"Tahoma",8.25,,0,0)
+Gui.F_MantCRDIOT.lblGLAcct2.BorderStyle(0)
+Gui.F_MantCRDIOT.txtIVA3.Create(TextBox,"",True,1500,300,0,2850,1815,True,0,"Tahoma",8.25,,1)
+Gui.F_MantCRDIOT.txtIVA3.Locked(True)
+Gui.F_MantCRDIOT.lblGLAcct3.Create(Label,"ISR 10%",True,645,195,0,285,2340,True,0,"Tahoma",8.25,,0,0)
+Gui.F_MantCRDIOT.lblGLAcct3.BorderStyle(0)
+Gui.F_MantCRDIOT.txtIVA4.Create(TextBox,"",True,1500,300,0,2850,2310,True,0,"Tahoma",8.25,,1)
+Gui.F_MantCRDIOT.txtIVA4.Locked(True)
+Gui.F_MantCRDIOT.lblGLAcct4.Create(Label,"RET 6%",True,585,195,0,285,2865,True,0,"Tahoma",8.25,,0,0)
+Gui.F_MantCRDIOT.lblGLAcct4.BorderStyle(0)
+Gui.F_MantCRDIOT.txtIVA5.Create(TextBox,"",True,1500,300,0,2850,2835,True,0,"Tahoma",8.25,,1)
+Gui.F_MantCRDIOT.txtIVA5.Locked(True)
+Gui.F_MantCRDIOT.lblGLAcct5.Create(Label,"RET 1.25%",True,825,195,0,285,3405,True,0,"Tahoma",8.25,,0,0)
+Gui.F_MantCRDIOT.lblGLAcct5.BorderStyle(0)
+Gui.F_MantCRDIOT.txtIVA6.Create(TextBox,"",True,1500,300,0,2850,3375,True,0,"Tahoma",8.25,,1)
+Gui.F_MantCRDIOT.txtIVA6.Locked(True)
+Gui.F_MantCRDIOT.cmdIVA2.Create(Button)
+Gui.F_MantCRDIOT.cmdIVA2.Enabled(True)
+Gui.F_MantCRDIOT.cmdIVA2.Visible(True)
+Gui.F_MantCRDIOT.cmdIVA2.Zorder(0)
+Gui.F_MantCRDIOT.cmdIVA2.Size(345,345)
+Gui.F_MantCRDIOT.cmdIVA2.Position(4515,1320)
+Gui.F_MantCRDIOT.cmdIVA2.Caption("^")
+Gui.F_MantCRDIOT.cmdIVA2.FontName("Tahoma")
+Gui.F_MantCRDIOT.cmdIVA2.FontSize(8.25)
+Gui.F_MantCRDIOT.cmdIVA2.Event(Click,cmdIVA2_Click)
+Gui.F_MantCRDIOT.cmdIVA3.Create(Button)
+Gui.F_MantCRDIOT.cmdIVA3.Enabled(True)
+Gui.F_MantCRDIOT.cmdIVA3.Visible(True)
+Gui.F_MantCRDIOT.cmdIVA3.Zorder(0)
+Gui.F_MantCRDIOT.cmdIVA3.Size(345,345)
+Gui.F_MantCRDIOT.cmdIVA3.Position(4515,1785)
+Gui.F_MantCRDIOT.cmdIVA3.Caption("^")
+Gui.F_MantCRDIOT.cmdIVA3.FontName("Tahoma")
+Gui.F_MantCRDIOT.cmdIVA3.FontSize(8.25)
+Gui.F_MantCRDIOT.cmdIVA3.Event(Click,cmdIVA3_Click)
+Gui.F_MantCRDIOT.cmdIVA4.Create(Button)
+Gui.F_MantCRDIOT.cmdIVA4.Enabled(True)
+Gui.F_MantCRDIOT.cmdIVA4.Visible(True)
+Gui.F_MantCRDIOT.cmdIVA4.Zorder(0)
+Gui.F_MantCRDIOT.cmdIVA4.Size(345,345)
+Gui.F_MantCRDIOT.cmdIVA4.Position(4515,2280)
+Gui.F_MantCRDIOT.cmdIVA4.Caption("^")
+Gui.F_MantCRDIOT.cmdIVA4.FontName("Tahoma")
+Gui.F_MantCRDIOT.cmdIVA4.FontSize(8.25)
+Gui.F_MantCRDIOT.cmdIVA4.Event(Click,cmdIVA4_Click)
+Gui.F_MantCRDIOT.cmdIVA5.Create(Button)
+Gui.F_MantCRDIOT.cmdIVA5.Enabled(True)
+Gui.F_MantCRDIOT.cmdIVA5.Visible(True)
+Gui.F_MantCRDIOT.cmdIVA5.Zorder(0)
+Gui.F_MantCRDIOT.cmdIVA5.Size(345,345)
+Gui.F_MantCRDIOT.cmdIVA5.Position(4515,2835)
+Gui.F_MantCRDIOT.cmdIVA5.Caption("^")
+Gui.F_MantCRDIOT.cmdIVA5.FontName("Tahoma")
+Gui.F_MantCRDIOT.cmdIVA5.FontSize(8.25)
+Gui.F_MantCRDIOT.cmdIVA5.Event(Click,cmdIVA5_Click)
+Gui.F_MantCRDIOT.cmdIVA6.Create(Button)
+Gui.F_MantCRDIOT.cmdIVA6.Enabled(True)
+Gui.F_MantCRDIOT.cmdIVA6.Visible(True)
+Gui.F_MantCRDIOT.cmdIVA6.Zorder(0)
+Gui.F_MantCRDIOT.cmdIVA6.Size(345,345)
+Gui.F_MantCRDIOT.cmdIVA6.Position(4515,3360)
+Gui.F_MantCRDIOT.cmdIVA6.Caption("^")
+Gui.F_MantCRDIOT.cmdIVA6.FontName("Tahoma")
+Gui.F_MantCRDIOT.cmdIVA6.FontSize(8.25)
+Gui.F_MantCRDIOT.cmdIVA6.Event(Click,cmdIVA6_Click)
+Gui.F_MantCRDIOT.lbl1.Create(Label,"Seleccione la cuenta contable de referencia del impuesto",True,4065,195,0,285,360,True,0,"Tahoma",8.25,,0,0)
+Gui.F_MantCRDIOT.lbl1.BorderStyle(0)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'This project is for Mexican Speaking Customers who want to add CFDI DIOT REPORT. The DIOT declaration statement (informative declaration of operation with vendors) is used to report vendor transactions to the Mexican tax authorities (Servicio de Administración Tributaria [SAT]). You might have to do this if you're subject to value-added tax (VAT). The DIOT declaration statement is a text file.
+V.Local.sError.Declare
+v.Local.bExists.Declare
+v.Local.bExistTable1.Declare
+v.Local.bExistTable2.Declare
+F.Intrinsic.Control.Try
+	F.ODBC.Connection!CONX.OpenCompanyConnection
+	
+	
+
+	F.ODBC.Connection!conx.TableExists("GAB_6684_GLACCTS",v.Local.bExistTable1)
+	f.Intrinsic.Control.If(v.Local.bExistTable1.Not)
+		F.ODBC.Connection!conx.Execute("CREATE TABLE GAB_6684_GLACCTS(  IVA16 CHAR(15), RET_IVA4 CHAR(15), RET_IVA1066 CHAR(15), RET_IVAISR10 CHAR(15), RET_IVA6 CHAR(15), RET_IVA0125 CHAR(15));")
+	f.Intrinsic.Control.EndIf
+
+
+	F.ODBC.Connection!conx.TableExists("CFDI_VENDORDIOT",v.Local.bExistTable2)
+	f.Intrinsic.Control.If(v.Local.bExistTable2.Not)
+		F.ODBC.Connection!conx.Execute("CREATE TABLE CFDI_VENDORDIOT( VENDOR_NO CHAR(6), TIPO_TERCERO CHAR(2), TIPO_OPERACION CHAR(50), RFC CHAR(16), ID_FISCAL CHAR(50), NOM_EXTR CHAR(50), PAIS_RES CHAR(50), NACIONALIDAD CHAR(50));CREATE UNIQUE INDEX CFDI_VENDIOT ON CFDI_VENDORDIOT(VENDOR_NO);")
+	f.Intrinsic.Control.EndIf
+
+	
+	'Accounts Payable > File > Vendors > Open > Options > SCRIPT 2
+	F.Intrinsic.Control.If(v.Caller.Hook,=,14505)
+		F.Intrinsic.Control.CallSub(F_DIOT_INFO_Load)
+	'Accounts Payable > File > Vendors > Open > Options POPULATE HOOK	
+	f.Intrinsic.Control.ElseIf(v.Caller.Hook,=,14501)
+		V.Passed.000079.Set("DIOT")	
+	'General Ledger > Administration > INFORMACION DE	DIOT PROVEEDOR
+	f.Intrinsic.Control.ElseIf(v.Caller.Switches,=,"DI")
+		gui.F_DIOT_INFO..Show
+		Gui.F_DIOT_INFO.cmdVendBrowser.Visible(True)
+	f.Intrinsic.Control.ElseIf(v.Caller.Switches,=,"PD")
+	'BUSCADOR Y DESPUES ABRIR PANTALLA DE DIOT INFO
+	'General Ledger > Reports > PRE DIOT 
+	F.ODBC.Connection!CONX.ExecuteAndReturn("select count(RET_IVA6) from GAB_6684_GLACCTS",v.Local.bExists)
+	f.Intrinsic.Control.If(v.Local.bExists,=,"0")
+		f.Intrinsic.UI.Msgbox("Cuentas Contables no Configuradas, favor de entrar a Contabilidad > Administracion > Mantenimiento Cuentas Contables DIOT")
+	f.Intrinsic.Control.Else
+		Gui.F_SelectCheckDate..Show
+	f.Intrinsic.Control.EndIf
+		
+	'General Ledger > Administration > MANTENIMIENTO DE CUENTAS CONTABLES
+	f.Intrinsic.Control.ElseIf(v.Caller.Switches,=,"MCC")
+		f.Intrinsic.Control.CallSub(LoadMantCRDIOT)
+	F.Intrinsic.Control.EndIf
+	
+	
+	
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(Unload)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+
+Program.Sub.Main.End
+
+
+'DIOT INFO SCREEN
+Program.Sub.F_DIOT_INFO_Load.Start
+V.Local.sError.Declare
+F.Intrinsic.Control.Try
+	V.Local.sSQL.Declare
+	
+	
+	GUI.F_DIOT_INFO.txtVendor.Text(V.Passed.Global.Trim)
+	
+	'Load Existing Data into Form searching from custom table GAB_5899_VENDOR
+	F.Intrinsic.String.Build("select * from CFDI_VENDORDIOT WHERE VENDOR_NO ='{0}'",V.Passed.Global.Trim,V.Local.sSQL)
+	F.ODBC.Connection!conx.OpenRecordsetRO("rstLoad",V.Local.sSql)
+	F.Intrinsic.Control.If(V.ODBC.conx!rstLoad.EOF,=,"False")
+		F.Intrinsic.Control.If(V.ODBC.conx!rstLoad.FieldValTrim!VENDOR_NO,=,"")
+			GUI.F_DIOT_INFO.txtTipoTercero.Value(1)
+			GUI.F_DIOT_INFO.txtTipoOp.Value(2)
+			GUI.F_DIOT_INFO.txtRFC.Value(3)
+			GUI.F_DIOT_INFO.txtIDFisc.Value(4)
+			GUI.F_DIOT_INFO.txtNExt.Value(5)
+			GUI.F_DIOT_INFO.txtPais.Value(6)
+			GUI.F_DIOT_INFO.txtNac.Value(7)
+		F.Intrinsic.Control.EndIf
+		GUI.F_DIOT_INFO.txtTipoTercero.Text(v.ODBC.conx!rstLoad.FieldValTrim!TIPO_TERCERO)
+		GUI.F_DIOT_INFO.txtTipoOp.Text(V.ODBC.conx!rstLoad.FieldValTrim!TIPO_OPERACION)
+		GUI.F_DIOT_INFO.txtRFC.Text(V.ODBC.conx!rstLoad.FieldValTrim!RFC)
+		GUI.F_DIOT_INFO.txtIDFisc.Text(V.ODBC.conx!rstLoad.FieldValTrim!ID_FISCAL)
+		GUI.F_DIOT_INFO.txtNExt.Text(V.ODBC.conx!rstLoad.FieldValTrim!NOM_EXTR)
+		GUI.F_DIOT_INFO.txtPais.Text(V.ODBC.conx!rstLoad.FieldValTrim!PAIS_RES)
+		GUI.F_DIOT_INFO.txtNac.Text(V.ODBC.conx!rstLoad.FieldValTrim!NACIONALIDAD)
+	F.Intrinsic.Control.EndIf
+
+
+
+	f.Intrinsic.Control.If(v.Screen.F_DIOT_INFO!txtTipoTercero.Text,=,"04")
+		GUI.F_DIOT_INFO.txtTipoTercero.Visible(True)
+		GUI.F_DIOT_INFO.lblTipoTercero.Visible(True)
+		GUI.F_DIOT_INFO.lblTipoOp.Visible(True)
+		GUI.F_DIOT_INFO.txtTipoOp.Visible(True)		
+		GUI.F_DIOT_INFO.txtRFC.Visible(True)
+		GUI.F_DIOT_INFO.lblRFC.Visible(True)
+		GUI.F_DIOT_INFO.lblIDFisc.Visible(False)
+		GUI.F_DIOT_INFO.txtIDFisc.Visible(False)
+		GUI.F_DIOT_INFO.lblNExt.Visible(False)
+		GUI.F_DIOT_INFO.txtNExt.Visible(False)
+		GUI.F_DIOT_INFO.txtPais.Visible(False)
+		GUI.F_DIOT_INFO.lblPais.Visible(False)
+		GUI.F_DIOT_INFO.txtNac.Visible(False)
+		GUI.F_DIOT_INFO.lblINac.Visible(False)
+		GUI.F_DIOT_INFO.txtIDFisc.Text("")
+		GUI.F_DIOT_INFO.txtNExt.Text("")
+		GUI.F_DIOT_INFO.txtPais.Text("")
+		GUI.F_DIOT_INFO.txtNac.Text("")
+	
+	f.Intrinsic.Control.ElseIf(v.Screen.F_DIOT_INFO!txtTipoTercero.Text,=,"05")
+		Gui.F_DIOT_INFO.txtTipoOp.Locked(True)
+		GUI.F_DIOT_INFO.txtTipoTercero.Visible(True)
+		GUI.F_DIOT_INFO.lblTipoTercero.Visible(True)
+		GUI.F_DIOT_INFO.lblTipoOp.Visible(True)
+		GUI.F_DIOT_INFO.txtTipoOp.Visible(True)		
+		GUI.F_DIOT_INFO.txtRFC.Visible(True)
+		GUI.F_DIOT_INFO.lblRFC.Visible(True)
+		GUI.F_DIOT_INFO.lblIDFisc.Visible(True)
+		GUI.F_DIOT_INFO.txtIDFisc.Visible(True)
+		GUI.F_DIOT_INFO.lblNExt.Visible(True)
+		GUI.F_DIOT_INFO.txtNExt.Visible(True)
+		GUI.F_DIOT_INFO.txtPais.Visible(True)
+		GUI.F_DIOT_INFO.txtNac.Visible(True)
+		GUI.F_DIOT_INFO.lblINac.Visible(True)
+
+	f.Intrinsic.Control.ElseIf(v.Screen.F_DIOT_INFO!txtTipoTercero.Text,=,"15")
+		Gui.F_DIOT_INFO.txtTipoOp.Locked(False)
+		Gui.F_DIOT_INFO.cmdTipoOp.Visible(False)
+		GUI.F_DIOT_INFO.txtTipoTercero.Visible(True)
+		GUI.F_DIOT_INFO.lblTipoTercero.Visible(True)
+		GUI.F_DIOT_INFO.lblTipoOp.Visible(True)
+		GUI.F_DIOT_INFO.txtTipoOp.Visible(True)		
+		GUI.F_DIOT_INFO.txtRFC.Visible(False)
+		GUI.F_DIOT_INFO.lblRFC.Visible(False)
+		GUI.F_DIOT_INFO.lblIDFisc.Visible(False)
+		GUI.F_DIOT_INFO.txtIDFisc.Visible(False)
+		GUI.F_DIOT_INFO.lblNExt.Visible(False)
+		GUI.F_DIOT_INFO.txtNExt.Visible(False)
+		GUI.F_DIOT_INFO.txtPais.Visible(False)
+		GUI.F_DIOT_INFO.lblPais.Visible(False)
+		GUI.F_DIOT_INFO.txtNac.Visible(False)
+		GUI.F_DIOT_INFO.lblINac.Visible(False)
+		GUI.F_DIOT_INFO.txtRFC.Text("")
+		GUI.F_DIOT_INFO.txtIDFisc.Text("")
+		GUI.F_DIOT_INFO.txtNExt.Text("")
+		GUI.F_DIOT_INFO.txtPais.Text("")
+		GUI.F_DIOT_INFO.txtNac.Text("")
+	F.Intrinsic.Control.Else
+		Gui.F_DIOT_INFO.txtTipoOp.Locked(True)
+		Gui.F_DIOT_INFO.cmdTipoOp.Visible(True)
+		GUI.F_DIOT_INFO.txtTipoTercero.Visible(True)
+		GUI.F_DIOT_INFO.lblTipoTercero.Visible(True)
+		GUI.F_DIOT_INFO.lblTipoOp.Visible(True)
+		GUI.F_DIOT_INFO.txtTipoOp.Visible(True)		
+		GUI.F_DIOT_INFO.txtRFC.Visible(True)
+		GUI.F_DIOT_INFO.lblRFC.Visible(True)
+		GUI.F_DIOT_INFO.lblIDFisc.Visible(True)
+		GUI.F_DIOT_INFO.txtIDFisc.Visible(True)
+		GUI.F_DIOT_INFO.lblNExt.Visible(True)
+		GUI.F_DIOT_INFO.txtNExt.Visible(True)
+		GUI.F_DIOT_INFO.txtPais.Visible(True)
+		GUI.F_DIOT_INFO.txtNac.Visible(True)
+		GUI.F_DIOT_INFO.lblINac.Visible(True)
+	f.Intrinsic.Control.EndIf
+
+
+
+	GUI.F_DIOT_INFO..Show
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(Unload)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+
+Program.Sub.F_DIOT_INFO_Load.End
+
+Program.Sub.cmdTipoTercero_Click.Start
+V.Local.sError.Declare
+F.Intrinsic.Control.Try
+
+	V.Local.sRet.Declare(String)
+	v.Local.sTitles.Declare(string)
+	v.Local.iWidths.Declare(long)
+	
+	F.Intrinsic.String.Split("CLAVE*!*TIPO TERCERO",*!*,v.Local.sTitles)
+	F.Intrinsic.String.Split("300*!*800",*!*,v.Local.iWidths)
+	F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+	F.Intrinsic.UI.Browser("SELECT * from CFDI_C_DIOTIPOTERCERO", "CONX","SELECT CLAVE,TERCERO from CFDI_C_DIOTIPOTERCERO",V.Local.sTitles,V.Local.iWidths,V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet,"=","***CANCEL***")
+	 F.Intrinsic.Control.Else
+	 	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		GUI.F_DIOT_INFO.txtTipoTercero.Text(V.Local.sRet(0).Trim)		
+	F.Intrinsic.Control.EndIf
+'	Function.Intrinsic.Debug.InvokeDebugger
+'	Function.Intrinsic.Debug.Stop
+	
+	f.Intrinsic.Control.If(v.Screen.F_DIOT_INFO!txtTipoTercero.Text,=,"04")
+		GUI.F_DIOT_INFO.txtTipoTercero.Visible(True)
+		GUI.F_DIOT_INFO.lblTipoTercero.Visible(True)
+		GUI.F_DIOT_INFO.lblTipoOp.Visible(True)
+		GUI.F_DIOT_INFO.txtTipoOp.Visible(True)		
+		GUI.F_DIOT_INFO.txtRFC.Visible(True)
+		GUI.F_DIOT_INFO.lblRFC.Visible(True)
+		GUI.F_DIOT_INFO.lblIDFisc.Visible(False)
+		GUI.F_DIOT_INFO.txtIDFisc.Visible(False)
+		GUI.F_DIOT_INFO.lblNExt.Visible(False)
+		GUI.F_DIOT_INFO.txtNExt.Visible(False)
+		GUI.F_DIOT_INFO.txtPais.Visible(False)
+		GUI.F_DIOT_INFO.lblPais.Visible(False)
+		GUI.F_DIOT_INFO.txtNac.Visible(False)
+		GUI.F_DIOT_INFO.lblINac.Visible(False)
+'		GUI.F_DIOT_INFO.txtTipoTercero.Text("")
+'		GUI.F_DIOT_INFO.txtTipoOp.Text("")
+		'GUI.F_DIOT_INFO.txtRFC.Text("")
+		GUI.F_DIOT_INFO.txtIDFisc.Text("")
+		GUI.F_DIOT_INFO.txtNExt.Text("")
+		GUI.F_DIOT_INFO.txtPais.Text("")
+		GUI.F_DIOT_INFO.txtNac.Text("")
+'	f.Intrinsic.Control.Else
+'		GUI.F_DIOT_INFO.txtTipoTercero.Visible(True)
+'		GUI.F_DIOT_INFO.lblTipoTercero.Visible(True)
+'		GUI.F_DIOT_INFO.lblTipoOp.Visible(True)
+'		GUI.F_DIOT_INFO.txtTipoOp.Visible(True)		
+'		GUI.F_DIOT_INFO.txtRFC.Visible(True)
+'		GUI.F_DIOT_INFO.lblRFC.Visible(True)
+'		GUI.F_DIOT_INFO.lblIDFisc.Visible(True)
+'		GUI.F_DIOT_INFO.txtIDFisc.Visible(True)
+'		GUI.F_DIOT_INFO.lblNExt.Visible(True)
+'		GUI.F_DIOT_INFO.txtNExt.Visible(True)
+'		GUI.F_DIOT_INFO.txtPais.Visible(True)
+'		GUI.F_DIOT_INFO.lblPais.Visible(True)
+'		GUI.F_DIOT_INFO.txtNac.Visible(True)
+'		GUI.F_DIOT_INFO.lblINac.Visible(True)
+'	f.Intrinsic.Control.EndIf
+	
+	
+	f.Intrinsic.Control.ElseIf(v.Screen.F_DIOT_INFO!txtTipoTercero.Text,=,"05")
+		Gui.F_DIOT_INFO.txtTipoOp.Locked(True)
+		GUI.F_DIOT_INFO.txtTipoTercero.Visible(True)
+		GUI.F_DIOT_INFO.lblTipoTercero.Visible(True)
+		GUI.F_DIOT_INFO.lblTipoOp.Visible(True)
+		GUI.F_DIOT_INFO.txtTipoOp.Visible(True)		
+		GUI.F_DIOT_INFO.txtRFC.Visible(True)
+		GUI.F_DIOT_INFO.lblRFC.Visible(True)
+		GUI.F_DIOT_INFO.lblIDFisc.Visible(True)
+		GUI.F_DIOT_INFO.txtIDFisc.Visible(True)
+		GUI.F_DIOT_INFO.lblNExt.Visible(True)
+		GUI.F_DIOT_INFO.txtNExt.Visible(True)
+		GUI.F_DIOT_INFO.txtPais.Visible(True)
+		GUI.F_DIOT_INFO.txtNac.Visible(True)
+		GUI.F_DIOT_INFO.lblINac.Visible(True)
+
+'	f.Intrinsic.Control.Else
+'		GUI.F_DIOT_INFO.txtTipoTercero.Visible(True)
+'		GUI.F_DIOT_INFO.lblTipoTercero.Visible(True)
+'		GUI.F_DIOT_INFO.lblTipoOp.Visible(True)
+'		GUI.F_DIOT_INFO.txtTipoOp.Visible(True)		
+'		GUI.F_DIOT_INFO.txtRFC.Visible(True)
+'		GUI.F_DIOT_INFO.lblRFC.Visible(True)
+'		GUI.F_DIOT_INFO.lblIDFisc.Visible(True)
+'		GUI.F_DIOT_INFO.txtIDFisc.Visible(True)
+'		GUI.F_DIOT_INFO.lblNExt.Visible(True)
+'		GUI.F_DIOT_INFO.txtNExt.Visible(True)
+'		GUI.F_DIOT_INFO.txtPais.Visible(True)
+'		GUI.F_DIOT_INFO.txtNac.Visible(True)
+'		GUI.F_DIOT_INFO.lblINac.Visible(True)
+'	f.Intrinsic.Control.EndIf	
+	
+	f.Intrinsic.Control.ElseIf(v.Screen.F_DIOT_INFO!txtTipoTercero.Text,=,"15")
+		Gui.F_DIOT_INFO.txtTipoOp.Locked(False)
+		Gui.F_DIOT_INFO.cmdTipoOp.Visible(False)
+		GUI.F_DIOT_INFO.txtTipoTercero.Visible(True)
+		GUI.F_DIOT_INFO.lblTipoTercero.Visible(True)
+		GUI.F_DIOT_INFO.lblTipoOp.Visible(True)
+		GUI.F_DIOT_INFO.txtTipoOp.Visible(True)		
+		GUI.F_DIOT_INFO.txtRFC.Visible(False)
+		GUI.F_DIOT_INFO.lblRFC.Visible(False)
+		GUI.F_DIOT_INFO.lblIDFisc.Visible(False)
+		GUI.F_DIOT_INFO.txtIDFisc.Visible(False)
+		GUI.F_DIOT_INFO.lblNExt.Visible(False)
+		GUI.F_DIOT_INFO.txtNExt.Visible(False)
+		GUI.F_DIOT_INFO.txtPais.Visible(False)
+		GUI.F_DIOT_INFO.lblPais.Visible(False)
+		GUI.F_DIOT_INFO.txtNac.Visible(False)
+		GUI.F_DIOT_INFO.lblINac.Visible(False)
+	'	GUI.F_DIOT_INFO.txtTipoTercero.Text("")
+		'GUI.F_DIOT_INFO.txtTipoOp.Text("")
+		GUI.F_DIOT_INFO.txtRFC.Text("")
+		GUI.F_DIOT_INFO.txtIDFisc.Text("")
+		GUI.F_DIOT_INFO.txtNExt.Text("")
+		GUI.F_DIOT_INFO.txtPais.Text("")
+		GUI.F_DIOT_INFO.txtNac.Text("")
+'	f.Intrinsic.Control.Else
+'		Gui.F_DIOT_INFO.txtTipoOp.Locked(True)
+'		Gui.F_DIOT_INFO.cmdTipoOp.Visible(True)
+'		GUI.F_DIOT_INFO.txtTipoTercero.Visible(True)
+'		GUI.F_DIOT_INFO.lblTipoTercero.Visible(True)
+'		GUI.F_DIOT_INFO.lblTipoOp.Visible(True)
+'		GUI.F_DIOT_INFO.txtTipoOp.Visible(True)		
+'		GUI.F_DIOT_INFO.txtRFC.Visible(True)
+'		GUI.F_DIOT_INFO.lblRFC.Visible(True)
+'		GUI.F_DIOT_INFO.lblIDFisc.Visible(True)
+'		GUI.F_DIOT_INFO.txtIDFisc.Visible(True)
+'		GUI.F_DIOT_INFO.lblNExt.Visible(True)
+'		GUI.F_DIOT_INFO.txtNExt.Visible(True)
+'		GUI.F_DIOT_INFO.txtPais.Visible(True)
+'		GUI.F_DIOT_INFO.lblPais.Visible(True)
+'		GUI.F_DIOT_INFO.txtNac.Visible(True)
+'		GUI.F_DIOT_INFO.lblINac.Visible(True)
+	f.Intrinsic.Control.EndIf	
+	
+	
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(Unload)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdTipoTercero_Click.End
+
+Program.Sub.cmdTipoOp_Click.Start
+V.Local.sError.Declare
+F.Intrinsic.Control.Try
+
+	V.Local.sRet.Declare(String)
+	v.Local.sTitles.Declare(string)
+	v.Local.iWidths.Declare(long)
+	
+	F.Intrinsic.String.Split("CLAVE*!*TIPO OPERACION",*!*,v.Local.sTitles)
+	F.Intrinsic.String.Split("300*!*800",*!*,v.Local.iWidths)
+	F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+	F.Intrinsic.UI.Browser("SELECT * from CFDI_C_DIOTOPERACION", "CONX","SELECT CLAVE,TIPO_OPERACION from CFDI_C_DIOTOPERACION",V.Local.sTitles,V.Local.iWidths,V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet,"=","***CANCEL***")
+	 F.Intrinsic.Control.Else
+	 	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		GUI.F_DIOT_INFO.txtTipoOp.Text(V.Local.sRet(0).Trim)		
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(Unload)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdTipoOp_Click.End
+
+Program.Sub.cmdSave_Click.Start
+V.Local.sSQL.Declare(String)
+v.Local.sVendor.Declare
+
+
+v.Local.sVendor.Set(V.Screen.F_DIOT_INFO!txtVendor.Text)
+
+	'SAVE INFORMATION FROM FORM INTO CUSTOM TABLE CFDI_VENDORDIOT
+	F.Intrinsic.String.Build("SELECT * FROM CFDI_VENDORDIOT WHERE VENDOR_NO = '{0}'",v.Local.sVendor,V.Local.sSQL)
+	F.ODBC.Connection!CONX.OpenLocalRecordsetRW("RST",v.Local.sSQL)
+	F.Intrinsic.Control.If(v.ODBC.CONX!RST.EOF,=,True)
+		F.ODBC.CONX!RST.AddNew
+		F.ODBC.CONX!RST.Set!VENDOR_NO(v.Screen.F_DIOT_INFO!txtVendor.Text)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.CONX!RST.Set!TIPO_TERCERO(v.Screen.F_DIOT_INFO!txtTipoTercero.Text)
+		F.ODBC.CONX!RST.Set!TIPO_OPERACION(v.Screen.F_DIOT_INFO!txtTipoOp.Text)
+		F.ODBC.CONX!RST.Set!RFC(v.Screen.F_DIOT_INFO!txtRFC.Text)
+		F.ODBC.CONX!RST.Set!ID_FISCAL(v.Screen.F_DIOT_INFO!txtIDFisc.Text)
+		F.ODBC.CONX!RST.Set!NOM_EXTR(v.Screen.F_DIOT_INFO!txtNExt.Text)
+		F.ODBC.CONX!RST.Set!PAIS_RES(v.Screen.F_DIOT_INFO!txtPais.Text)
+		F.ODBC.CONX!RST.Set!NACIONALIDAD(v.Screen.F_DIOT_INFO!txtNac.Text)
+				
+		F.ODBC.CONX!RST.Update
+		F.Intrinsic.UI.Msgbox("INFORMACION DEL DIOT GUARDADO")
+		F.ODBC.CONX!RST.Close
+
+Program.Sub.cmdSave_Click.End
+
+Program.Sub.cmdDelete_Click.Start
+'Clean rows
+GUI.F_DIOT_INFO.txtIDFisc.Text("")
+GUI.F_DIOT_INFO.txtNac.Text("")
+GUI.F_DIOT_INFO.txtNExt.Text("")
+GUI.F_DIOT_INFO.txtPais.Text("")
+GUI.F_DIOT_INFO.txtRFC.Text("")
+GUI.F_DIOT_INFO.txtTipoOp.Text("")
+GUI.F_DIOT_INFO.txtTipoTercero.Text("")
+Gui.F_DIOT_INFO.txtTipoOp.Locked(True)
+Gui.F_DIOT_INFO.cmdTipoOp.Visible(True)
+GUI.F_DIOT_INFO.txtTipoTercero.Visible(True)
+GUI.F_DIOT_INFO.lblTipoTercero.Visible(True)
+GUI.F_DIOT_INFO.lblTipoOp.Visible(True)
+GUI.F_DIOT_INFO.txtTipoOp.Visible(True)		
+GUI.F_DIOT_INFO.txtRFC.Visible(True)
+GUI.F_DIOT_INFO.lblRFC.Visible(True)
+GUI.F_DIOT_INFO.lblIDFisc.Visible(True)
+GUI.F_DIOT_INFO.txtIDFisc.Visible(True)
+GUI.F_DIOT_INFO.lblNExt.Visible(True)
+GUI.F_DIOT_INFO.txtNExt.Visible(True)
+GUI.F_DIOT_INFO.txtPais.Visible(True)
+GUI.F_DIOT_INFO.txtNac.Visible(True)
+GUI.F_DIOT_INFO.lblINac.Visible(True)
+Program.Sub.cmdDelete_Click.End
+
+Program.Sub.cmdVendBrowser_Click.Start
+v.Local.sRet.Declare(string)
+V.Local.sSQL.Declare(string)
+v.Local.sTemp.Declare(string)
+v.Local.sTitles.Declare(string)
+v.Local.iWidths.Declare(long)
+V.local.sVendor.Declare
+'Load Custom Browser from Custom Table CFDI_C_ESTADO Into Form
+F.Intrinsic.String.Split("ID*!*PROVEEDOR","*!*",v.local.sTitles)
+F.Intrinsic.String.Split("100*!*500","*!*",v.local.iWidths)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("SELECCIONE PROVEEDOR","conx","select VENDOR,NAME_VENDOR from V_VENDOR_MASTER where vendor <> ''",v.Local.sTitles,v.Local.iWidths,v.Local.sRet)
+F.Intrinsic.Control.If(v.Local.sRet,"=","***CANCEL***")
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+	GUI.F_DIOT_INFO.txtVendor.Text(V.Local.sRet(0).Trim)
+	V.Local.sVendor.Set(V.Screen.F_DIOT_INFO!txtVendor.Text)
+	'Load Existing Data into Form searching from custom table GAB_5899_VENDOR
+	F.Intrinsic.String.Build("select * from CFDI_VENDORDIOT WHERE VENDOR_NO ='{0}'",V.local.sVendor,V.Local.sSQL)
+	F.ODBC.Connection!conx.OpenRecordsetRO("rstLoad",V.Local.sSql)
+	F.Intrinsic.Control.If(V.ODBC.conx!rstLoad.EOF,=,"False")
+		F.Intrinsic.Control.If(V.ODBC.conx!rstLoad.FieldValTrim!VENDOR_NO,=,"")
+			GUI.F_DIOT_INFO.txtTipoTercero.Value(1)
+			GUI.F_DIOT_INFO.txtTipoOp.Value(2)
+			GUI.F_DIOT_INFO.txtRFC.Value(3)
+			GUI.F_DIOT_INFO.txtIDFisc.Value(4)
+			GUI.F_DIOT_INFO.txtNExt.Value(5)
+			GUI.F_DIOT_INFO.txtPais.Value(6)
+			GUI.F_DIOT_INFO.txtNac.Value(7)
+		F.Intrinsic.Control.EndIf
+		GUI.F_DIOT_INFO.txtVendor.Text(v.ODBC.conx!rstLoad.FieldValTrim!VENDOR_NO)
+		GUI.F_DIOT_INFO.txtTipoTercero.Text(v.ODBC.conx!rstLoad.FieldValTrim!TIPO_TERCERO)
+		GUI.F_DIOT_INFO.txtTipoOp.Text(V.ODBC.conx!rstLoad.FieldValTrim!TIPO_OPERACION)
+		GUI.F_DIOT_INFO.txtRFC.Text(V.ODBC.conx!rstLoad.FieldValTrim!RFC)
+		GUI.F_DIOT_INFO.txtIDFisc.Text(V.ODBC.conx!rstLoad.FieldValTrim!ID_FISCAL)
+		GUI.F_DIOT_INFO.txtNExt.Text(V.ODBC.conx!rstLoad.FieldValTrim!NOM_EXTR)
+		GUI.F_DIOT_INFO.txtPais.Text(V.ODBC.conx!rstLoad.FieldValTrim!PAIS_RES)
+		GUI.F_DIOT_INFO.txtNac.Text(V.ODBC.conx!rstLoad.FieldValTrim!NACIONALIDAD)
+	F.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.If(v.Screen.F_DIOT_INFO!txtTipoTercero.Text,=,"04")
+		GUI.F_DIOT_INFO.txtTipoTercero.Visible(True)
+		GUI.F_DIOT_INFO.lblTipoTercero.Visible(True)
+		GUI.F_DIOT_INFO.lblTipoOp.Visible(True)
+		GUI.F_DIOT_INFO.txtTipoOp.Visible(True)		
+		GUI.F_DIOT_INFO.txtRFC.Visible(True)
+		GUI.F_DIOT_INFO.lblRFC.Visible(True)
+		GUI.F_DIOT_INFO.lblIDFisc.Visible(False)
+		GUI.F_DIOT_INFO.txtIDFisc.Visible(False)
+		GUI.F_DIOT_INFO.lblNExt.Visible(False)
+		GUI.F_DIOT_INFO.txtNExt.Visible(False)
+		GUI.F_DIOT_INFO.txtPais.Visible(False)
+		GUI.F_DIOT_INFO.lblPais.Visible(False)
+		GUI.F_DIOT_INFO.txtNac.Visible(False)
+		GUI.F_DIOT_INFO.lblINac.Visible(False)
+		GUI.F_DIOT_INFO.txtIDFisc.Text("")
+		GUI.F_DIOT_INFO.txtNExt.Text("")
+		GUI.F_DIOT_INFO.txtPais.Text("")
+		GUI.F_DIOT_INFO.txtNac.Text("")
+	
+	f.Intrinsic.Control.ElseIf(v.Screen.F_DIOT_INFO!txtTipoTercero.Text,=,"05")
+		Gui.F_DIOT_INFO.txtTipoOp.Locked(True)
+		GUI.F_DIOT_INFO.txtTipoTercero.Visible(True)
+		GUI.F_DIOT_INFO.lblTipoTercero.Visible(True)
+		GUI.F_DIOT_INFO.lblTipoOp.Visible(True)
+		GUI.F_DIOT_INFO.txtTipoOp.Visible(True)		
+		GUI.F_DIOT_INFO.txtRFC.Visible(True)
+		GUI.F_DIOT_INFO.lblRFC.Visible(True)
+		GUI.F_DIOT_INFO.lblIDFisc.Visible(True)
+		GUI.F_DIOT_INFO.txtIDFisc.Visible(True)
+		GUI.F_DIOT_INFO.lblNExt.Visible(True)
+		GUI.F_DIOT_INFO.txtNExt.Visible(True)
+		GUI.F_DIOT_INFO.txtPais.Visible(True)
+		GUI.F_DIOT_INFO.txtNac.Visible(True)
+		GUI.F_DIOT_INFO.lblINac.Visible(True)
+
+	f.Intrinsic.Control.ElseIf(v.Screen.F_DIOT_INFO!txtTipoTercero.Text,=,"15")
+		Gui.F_DIOT_INFO.txtTipoOp.Locked(False)
+		Gui.F_DIOT_INFO.cmdTipoOp.Visible(False)
+		GUI.F_DIOT_INFO.txtTipoTercero.Visible(True)
+		GUI.F_DIOT_INFO.lblTipoTercero.Visible(True)
+		GUI.F_DIOT_INFO.lblTipoOp.Visible(True)
+		GUI.F_DIOT_INFO.txtTipoOp.Visible(True)		
+		GUI.F_DIOT_INFO.txtRFC.Visible(False)
+		GUI.F_DIOT_INFO.lblRFC.Visible(False)
+		GUI.F_DIOT_INFO.lblIDFisc.Visible(False)
+		GUI.F_DIOT_INFO.txtIDFisc.Visible(False)
+		GUI.F_DIOT_INFO.lblNExt.Visible(False)
+		GUI.F_DIOT_INFO.txtNExt.Visible(False)
+		GUI.F_DIOT_INFO.txtPais.Visible(False)
+		GUI.F_DIOT_INFO.lblPais.Visible(False)
+		GUI.F_DIOT_INFO.txtNac.Visible(False)
+		GUI.F_DIOT_INFO.lblINac.Visible(False)
+		GUI.F_DIOT_INFO.txtRFC.Text("")
+		GUI.F_DIOT_INFO.txtIDFisc.Text("")
+		GUI.F_DIOT_INFO.txtNExt.Text("")
+		GUI.F_DIOT_INFO.txtPais.Text("")
+		GUI.F_DIOT_INFO.txtNac.Text("")
+	F.Intrinsic.Control.Else
+		Gui.F_DIOT_INFO.txtTipoOp.Locked(True)
+		Gui.F_DIOT_INFO.cmdTipoOp.Visible(True)
+		GUI.F_DIOT_INFO.txtTipoTercero.Visible(True)
+		GUI.F_DIOT_INFO.lblTipoTercero.Visible(True)
+		GUI.F_DIOT_INFO.lblTipoOp.Visible(True)
+		GUI.F_DIOT_INFO.txtTipoOp.Visible(True)		
+		GUI.F_DIOT_INFO.txtRFC.Visible(True)
+		GUI.F_DIOT_INFO.lblRFC.Visible(True)
+		GUI.F_DIOT_INFO.lblIDFisc.Visible(True)
+		GUI.F_DIOT_INFO.txtIDFisc.Visible(True)
+		GUI.F_DIOT_INFO.lblNExt.Visible(True)
+		GUI.F_DIOT_INFO.txtNExt.Visible(True)
+		GUI.F_DIOT_INFO.txtPais.Visible(True)
+		GUI.F_DIOT_INFO.txtNac.Visible(True)
+		GUI.F_DIOT_INFO.lblINac.Visible(True)
+	f.Intrinsic.Control.EndIf
+	
+	
+F.Intrinsic.Control.EndIf
+
+
+F.ODBC.Connection!CONX.CloseRecordsets
+Program.Sub.cmdVendBrowser_Click.End
+
+
+'DIOT PREDETALLE DASHBOARD
+
+Program.Sub.cmdLoad_Click.Start
+V.Local.sSQL.Declare
+V.Local.sFilter.Declare
+v.Local.fRet.Declare
+V.Local.sIVA16.Declare
+V.Local.sRET_IVA4.Declare
+V.Local.sRET_IVA1066.Declare
+V.Local.sRET_IVAISR10.Declare
+V.Local.sRET_IVA6.Declare
+V.Local.sRET_IVA0125.Declare
+
+Gui.F_SelectCheckDate..Enabled(False)
+F.Intrinsic.Control.If(V.Screen.F_SelectCheckDate!dtpFrom.Value,>,v.Screen.F_SelectCheckDate!dtpTo.Value)
+	F.Intrinsic.UI.Msgbox("Fecha Invalida")
+	Gui.F_SelectCheckDate..Enabled(True)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+
+
+'----------------------------------------------------Tab ------------------------------------------------ DIOT
+
+F.Intrinsic.Control.If(v.DataTable.GLAPCheckDIOT_DT.Exists,=,true)
+	F.Data.DataView.Close("GLAPCheckDIOT_DT", "GLAPCheckDIOT_DV")
+	F.Data.Datatable.Close("GLAPCheckDIOT_DT")
+F.Intrinsic.Control.EndIf
+' SE AGREGO LTrim(RTrim(VENDOR)) + LTrim(RTrim(INVOICE)) AS VENDORINVOICE
+F.Intrinsic.String.Build("select DATE_CHECK, CHECK_NUM, EXCHANGE_CURR AS CURRENCY, LTrim(RTrim(VENDOR)) AS PROVEEDOR, LTrim(RTrim(INVOICE)) AS INVOICE, LTrim(RTrim(VENDOR)) + LTrim(RTrim(INVOICE))+RTrim(CHECK_NUM)+RTrim(batch_num) AS VENDORINVOICECHECK,batch_num, LTrim(RTrim(VENDOR)) + LTrim(RTrim(INVOICE)) as VENDORINVOICE, AMT_TRANSACTION AS TOTAL from v_AP_OPEN_ITEMS WHERE BATCH_CODE = '11'  AND  DATE_CHECK between '{0}' and '{1}' ORDER BY INVOICE",v.Screen.F_SelectCheckDate!dtpFrom.Value.FormatYYYY-MM-DD,v.Screen.F_SelectCheckDate!dtpTo.Value.FormatYYYY-MM-DD, v.Local.sSQL)
+F.Data.DataTable.CreateFromSQL("GLAPCheckDIOT_DT", "CONX", v.Local.sSQL,true)
+F.Data.DataTable.AddColumn("GLAPCheckDIOT_DT", "RFC", "String")
+F.Data.DataTable.AddColumn("GLAPCheckDIOT_DT", "CHECK_NAME", "String")
+F.Data.DataTable.AddColumn("GLAPCheckDIOT_DT", "TAX_CODE", "String")
+F.Data.DataTable.AddColumn("GLAPCheckDIOT_DT", "TOTAL2", "Float")
+F.Data.DataTable.AddColumn("GLAPCheckDIOT_DT", "IVA16", "Float")
+F.Data.DataTable.AddColumn("GLAPCheckDIOT_DT", "RET_IVA4_2", "Float")
+F.Data.DataTable.AddColumn("GLAPCheckDIOT_DT", "RET_IVA1066_2", "Float")
+F.Data.DataTable.AddColumn("GLAPCheckDIOT_DT", "RET_IVAISR10_2", "Float")
+F.Data.DataTable.AddColumn("GLAPCheckDIOT_DT", "RET_IVA6_2", "Float")
+F.Data.DataTable.AddColumn("GLAPCheckDIOT_DT", "RET_IVA0125_2", "Float")
+
+F.Data.Dictionary.CreateFromSQL("TOTAL2_Dic", "CONX", "SELECT DISTINCT LTrim(RTrim(VENDOR)) + LTrim(RTrim(INVOICE)) AS VENDORINVOICE,AMT_TRANSACTION AS TOTAL FROM V_AP_OPEN_ITEMS WHERE BATCH_CODE = '10'")
+F.Data.Dictionary.SetDefaultReturn("TOTAL2_Dic", "0")
+F.Data.DataTable.FillFromDictionary("GLAPCheckDIOT_DT", "TOTAL2_Dic", "VENDORINVOICE","TOTAL2")
+F.Data.Dictionary.Close("TOTAL2_Dic")
+
+F.Data.Dictionary.CreateFromSQL("RFC_Dic", "CONX", "select DISTINCT LTrim(RTrim(VENDOR_NO)) as PROVEEDOR,rfc from CFDI_VENDORDIOT")
+F.Data.Dictionary.SetDefaultReturn("RFC_Dic", "")
+F.Data.DataTable.FillFromDictionary("GLAPCheckDIOT_DT", "RFC_Dic", "PROVEEDOR","RFC")
+F.Data.Dictionary.Close("RFC_Dic")
+
+F.Data.Dictionary.CreateFromSQL("CHECK_NAME_Dic", "CONX", "select DISTINCT LTrim(RTrim(VENDOR)) AS PROVEEDOR,NAME_VENDOR AS CHECK_NAME from V_VENDOR_MASTER")
+F.Data.Dictionary.SetDefaultReturn("CHECK_NAME_Dic", "")
+F.Data.DataTable.FillFromDictionary("GLAPCheckDIOT_DT", "CHECK_NAME_Dic", "PROVEEDOR","CHECK_NAME")
+F.Data.Dictionary.Close("CHECK_NAME_Dic")
+
+
+F.Data.Dictionary.CreateFromSQL("TAX_CODE_Dic", "CONX", "select DISTINCT LTrim(RTrim(VENDOR)) + LTrim(RTrim(INVOICE)) AS VENDORINVOICE,TAX_CODE  from V_AP_OPEN_ITEMS WHERE BATCH_CODE = '10'")
+F.Data.Dictionary.SetDefaultReturn("TAX_CODE_Dic", "SIN CLAVE")
+F.Data.DataTable.FillFromDictionary("GLAPCheckDIOT_DT", "TAX_CODE_Dic", "VENDORINVOICE","TAX_CODE")
+F.Data.Dictionary.Close("TAX_CODE_Dic")
+
+''''''''''''''''ERROR FALTA AGREGARLE POR CUST_VENDOR, AGREGAR LOOP''''''''''
+''' SOLUCION VENDOR+INVOICE AS VENDORINVOICE 2/09/2023
+'select DISTINCT LTrim(RTrim(INVOICE_NO)) AS INVOICE,ABS(AMOUNT_VEND) from GL_AP_CHECK_DTL WHERE GL_NUMBER = '{0}' AND CUST_VENDOR = '{1}'
+'select DISTINCT LTrim(RTrim(CUST_VENDOR)) + LTrim(RTrim(INVOICE_NO)) AS VENDORINVOICE,ABS(AMOUNT_VEND) from GL_AP_CHECK_DTL WHERE VENDORINVOICE <> ''
+F.ODBC.Connection!conx.ExecuteAndReturn("select IVA16 from GAB_6684_GLACCTS",V.Local.sIVA16.Trim)
+F.Intrinsic.String.Build("select DISTINCT LTrim(RTrim(CUST_VENDOR)) + LTrim(RTrim(INVOICE_NO))+RTrim(CHECK_NUMBER)+RTrim(batch) AS VENDORINVOICECHECK,ABS(AMOUNT_VEND) from GL_AP_CHECK_DTL WHERE VENDORINVOICECHECK <> '' AND GL_NUMBER = '{0}'",v.Local.sIVA16,v.Local.sSQL)
+F.Data.Dictionary.CreateFromSQL("IVA16_Dic", "CONX", v.Local.sSQL)
+F.Data.Dictionary.SetDefaultReturn("IVA16_Dic", "0")
+F.Data.DataTable.FillFromDictionary("GLAPCheckDIOT_DT", "IVA16_Dic", "VENDORINVOICECHECK","IVA16")
+F.Data.Dictionary.Close("IVA16_Dic")
+
+
+
+F.ODBC.Connection!conx.ExecuteAndReturn("select LTrim(RTrim(RET_IVA4)) AS RET_IVA4 from GAB_6684_GLACCTS",V.Local.sRET_IVA4.Trim)
+F.Intrinsic.String.Build("select LTrim(RTrim(VENDOR)) + LTrim(RTrim(INVOICE_NO)) AS VENDORINVOICE,ABS(AMOUNT_VEND) from GL_AP_DETAIL WHERE GL_NUMBER = '{0}' AND VENDORINVOICE <> ''",v.Local.sRET_IVA4,v.Local.sSQL)
+F.Data.Dictionary.CreateFromSQL("RET_IVA4_Dic", "CONX", v.Local.sSQL)
+F.Data.Dictionary.SetDefaultReturn("RET_IVA4_Dic", "0")
+F.Data.DataTable.FillFromDictionary("GLAPCheckDIOT_DT", "RET_IVA4_Dic", "VENDORINVOICE","RET_IVA4_2")
+F.Data.Dictionary.Close("RET_IVA4_Dic")
+
+
+
+F.ODBC.Connection!conx.ExecuteAndReturn("select LTrim(RTrim(RET_IVA1066)) AS RET_IVA1066 from GAB_6684_GLACCTS",V.Local.sRET_IVA1066.Trim)
+F.Intrinsic.String.Build("select LTrim(RTrim(VENDOR)) + LTrim(RTrim(INVOICE_NO)) AS VENDORINVOICE,ABS(AMOUNT_VEND) from GL_AP_DETAIL WHERE GL_NUMBER = '{0}' AND VENDORINVOICE <> ''",v.Local.sRET_IVA1066.Trim,v.Local.sSQL)
+F.Data.Dictionary.CreateFromSQL("RET_IVA1066_Dic", "CONX", v.Local.sSQL)
+F.Data.Dictionary.SetDefaultReturn("RET_IVA1066_Dic", "0")
+F.Data.DataTable.FillFromDictionary("GLAPCheckDIOT_DT", "RET_IVA1066_Dic", "VENDORINVOICE","RET_IVA1066_2")
+
+F.Data.Dictionary.Close("RET_IVA1066_Dic")
+
+F.ODBC.Connection!conx.ExecuteAndReturn("select  LTrim(RTrim(RET_IVAISR10)) AS RET_IVAISR10 from GAB_6684_GLACCTS",V.Local.sRET_IVAISR10.Trim)
+F.Intrinsic.String.Build("select LTrim(RTrim(VENDOR)) + LTrim(RTrim(INVOICE_NO)) AS VENDORINVOICE,ABS(AMOUNT_VEND) from GL_AP_DETAIL WHERE GL_NUMBER = '{0}' AND VENDORINVOICE <> ''",v.Local.sRET_IVAISR10.Trim,v.Local.sSQL)
+F.Data.Dictionary.CreateFromSQL("RET_IVAISR10_Dic", "CONX", v.Local.sSQL)
+F.Data.Dictionary.SetDefaultReturn("RET_IVAISR10_Dic", "0")
+F.Data.DataTable.FillFromDictionary("GLAPCheckDIOT_DT", "RET_IVAISR10_Dic", "VENDORINVOICE","RET_IVAISR10_2")
+F.Data.Dictionary.Close("RET_IVAISR10_Dic")
+
+
+
+
+F.ODBC.Connection!conx.ExecuteAndReturn("select RET_IVA6 from GAB_6684_GLACCTS",V.Local.sRET_IVA6.Trim)
+F.Intrinsic.String.Build("select LTrim(RTrim(VENDOR)) + LTrim(RTrim(INVOICE_NO)) AS VENDORINVOICE,ABS(AMOUNT_VEND) from GL_AP_DETAIL WHERE GL_NUMBER = '{0}' AND VENDORINVOICE <> ''",v.Local.sRET_IVA6,v.Local.sSQL)
+F.Data.Dictionary.CreateFromSQL("RET_IVA6_Dic", "CONX", v.Local.sSQL)
+F.Data.Dictionary.SetDefaultReturn("RET_IVA6_Dic", "0")
+F.Data.DataTable.FillFromDictionary("GLAPCheckDIOT_DT", "RET_IVA6_Dic", "VENDORINVOICE","RET_IVA6_2")
+F.Data.Dictionary.Close("RET_IVA6_Dic")
+
+F.ODBC.Connection!conx.ExecuteAndReturn("select RET_IVA0125 from GAB_6684_GLACCTS",V.Local.sRET_IVA0125.Trim)
+F.Intrinsic.String.Build("select LTrim(RTrim(VENDOR)) + LTrim(RTrim(INVOICE_NO)) AS VENDORINVOICE,ABS(AMOUNT_VEND) from GL_AP_DETAIL WHERE GL_NUMBER = '{0}' AND VENDORINVOICE <> ''",v.Local.sRET_IVA0125,v.Local.sSQL)
+F.Data.Dictionary.CreateFromSQL("RET_IVA0125_Dic", "CONX", v.Local.sSQL)
+F.Data.Dictionary.SetDefaultReturn("RET_IVA0125_Dic", "0")
+F.Data.DataTable.FillFromDictionary("GLAPCheckDIOT_DT", "RET_IVA0125_Dic", "VENDORINVOICE","RET_IVA0125_2")
+F.Data.Dictionary.Close("RET_IVA0125_Dic")
+
+
+F.Data.DataTable.AddExpressionColumn("GLAPCheckDIOT_DT","RET_IVA4","Float", "TOTAL/TOTAL2 * RET_IVA4_2")
+
+F.Data.DataTable.AddExpressionColumn("GLAPCheckDIOT_DT","RET_IVA1066","Float", "TOTAL/TOTAL2 * RET_IVA1066_2")
+
+F.Data.DataTable.AddExpressionColumn("GLAPCheckDIOT_DT","RET_IVAISR10","Float", "TOTAL/TOTAL2 * RET_IVAISR10_2")
+
+F.Data.DataTable.AddExpressionColumn("GLAPCheckDIOT_DT","RET_IVA6","Float", "TOTAL/TOTAL2 * RET_IVA6_2")
+
+F.Data.DataTable.AddExpressionColumn("GLAPCheckDIOT_DT","RET_IVA0125","Float", "TOTAL/TOTAL2 * RET_IVA0125_2")
+
+'F.Data.DataTable.AddExpressionColumn("GLAPCheckDIOT_DT","SUBTOTAL","Float", "IIF(TOTAL<>TOTAL2,TOTAL-IVA16+RET_IVA4+RET_IVAISR10+RET_IVA6+RET_IVA0125,0)")
+F.Data.DataTable.AddExpressionColumn("GLAPCheckDIOT_DT","SUBTOTAL","Float", "TOTAL-IVA16+RET_IVA4+RET_IVAISR10+RET_IVA6+RET_IVA0125")
+
+F.Data.DataView.Create("GLAPCheckDIOT_DT", "GLAPCheckDIOT_DV",22)
+
+Gui.F_PREDIOT.GsGridDIOT.AddGridviewFromDataview("GLAPCheckDIOT_GV", "GLAPCheckDIOT_DT", "GLAPCheckDIOT_DV")
+
+'Set column properties 
+
+Gui.F_PREDIOT.GsGridDIOT.SetGridviewProperty("GLAPCheckDIOT_GV","MultiSelect",True)
+Gui.F_PREDIOT.GsGridDIOT.SetGridviewProperty("GLAPCheckDIOT_GV","AllowSort",True)
+Gui.F_PREDIOT.GsGridDIOT.SetGridviewProperty("GLAPCheckDIOT_GV","AllowFilter",True)
+Gui.F_PREDIOT.GsGridDIOT.SetGridviewProperty("GLAPCheckDIOT_GV","OptionsDetailShowDetailTabs",False)
+Gui.F_PREDIOT.GsGridDIOT.SetGridviewProperty("GLAPCheckDIOT_GV","OptionsViewShowGroupPanel",True)
+Gui.F_PREDIOT.GsGridDIOT.SetGridviewProperty("GLAPCheckDIOT_GV","OptionsViewColumnAutoWidth",False)
+Gui.F_PREDIOT.GsGridDIOT.SetGridviewProperty("GLAPCheckDIOT_GV","OptionsViewRowAutoHeight",True)
+Gui.F_PREDIOT.GsGridDIOT.SetGridviewProperty("GLAPCheckDIOT_GV","ColumnPanelRowHeight",80)
+Gui.F_PREDIOT.GsGridDIOT.SetGridviewProperty("GLAPCheckDIOT_GV","SuppressNothingDates",True)
+Gui.F_PREDIOT.GsGridDIOT.SetGridviewProperty("GLAPCheckDIOT_GV","OptionsSelectionEnableAppearanceFocusedRow",True)
+
+
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "VENDORINVOICE", "Visible", False )
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "VENDORINVOICECHECK", "Visible", False )
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "BATCH_NUM", "Visible", False )
+
+
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "DATE_CHECK", "Caption", "FECHA" )
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "CHECK_NUM", "Caption", "NUMERO CHEQUE" )
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RFC",  "Caption", "RFC" )
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "CURRENCY",  "Caption", "MONEDA" )
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "PROVEEDOR", "Caption", "CLAVE PROVEEDOR" )
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "CHECK_NAME", "Caption", "NOMBRE PROVEEDOR" )
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "TAX_CODE","Caption", "CLAVE IMPUESTO")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "INVOICE", "Caption", "FACTURA" )
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "IVA16", "Caption", "IVA 16%" )
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA4", "Caption", "RET IVA 4%" )
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA1066", "Caption", "RET IVA 10.66%" )
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVAISR10",  "Caption", "RET ISR 10%" )
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA6", "Caption", "RET IVA 6%" )
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA0125", "Caption", "RET IVA 1.25%" )
+
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "TOTAL", "Caption", "TOTAL" )
+
+
+'WORD WRAP
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "DATE_CHECK", "HeaderWordWrap","Wrap")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "CHECK_NUM", "HeaderWordWrap","Wrap")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RFC", "HeaderWordWrap","Wrap")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "CURRENCY", "HeaderWordWrap","Wrap")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "PROVEEDOR", "HeaderWordWrap","Wrap")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "CHECK_NAME", "HeaderWordWrap","Wrap")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "TAX_CODE", "HeaderWordWrap","Wrap")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "INVOICE", "HeaderWordWrap","Wrap")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "IVA16", "HeaderWordWrap","Wrap")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA4", "HeaderWordWrap","Wrap")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "SUBTOTAL", "HeaderWordWrap","Wrap")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA1066", "HeaderWordWrap","Wrap")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVAISR10",  "HeaderWordWrap","Wrap")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA6", "HeaderWordWrap","Wrap")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA0125","HeaderWordWrap","Wrap")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "TOTAL", "HeaderWordWrap","Wrap")
+
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA4_2", "Visible", False)
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA1066_2", "Visible", False)
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVAISR10_2", "Visible", False)
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA6_2", "Visible", False)
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA0125_2", "Visible", False)
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "TOTAL2", "Visible", False)
+
+
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "DATE_CHECK", "HeaderHAlignment", "Center")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "CHECK_NUM", "HeaderHAlignment", "Center")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RFC", "HeaderHAlignment", "Center")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "CURRENCY", "HeaderHAlignment", "Center")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "PROVEEDOR", "HeaderHAlignment", "Center")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "CHECK_NAME", "HeaderHAlignment", "Center")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "TAX_CODE", "HeaderHAlignment", "Center")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "INVOICE", "HeaderHAlignment", "Center")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "IVA16", "HeaderHAlignment", "Center")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA4", "HeaderHAlignment", "Center")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "SUBTOTAL", "HeaderHAlignment", "Center")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA1066", "HeaderHAlignment", "Center")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVAISR10",  "HeaderHAlignment", "Center")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA6", "HeaderHAlignment", "Center")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA0125","HeaderHAlignment", "Center")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "TOTAL", "HeaderHAlignment", "Center")
+
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "DATE_CHECK", "CellHAlignment", "Center")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "CHECK_NUM", "CellHAlignment", "Center")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RFC", "CellHAlignment", "Center")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "CURRENCY", "CellHAlignment", "Center")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "PROVEEDOR", "CellHAlignment", "Center")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "CHECK_NAME", "CellHAlignment", "Center")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "TAX_CODE", "CellHAlignment", "Center")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "INVOICE", "CellHAlignment", "Center")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "IVA16", "CellHAlignment", "Center")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA4", "CellHAlignment", "Center")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "SUBTOTAL", "CellHAlignment", "Center")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA1066", "CellHAlignment", "Center")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVAISR10",  "CellHAlignment", "Center")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA6", "CellHAlignment", "Center")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA0125","CellHAlignment", "Center")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "TOTAL", "CellHAlignment", "Center")
+
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "DATE_CHECK", "HeaderBackColor","LightBlue")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "CHECK_NUM", "HeaderBackColor","LightBlue")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RFC", "HeaderBackColor","LightBlue")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "CURRENCY", "HeaderBackColor","LightBlue")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "PROVEEDOR", "HeaderBackColor","LightBlue")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "CHECK_NAME", "HeaderBackColor","LightBlue")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "TAX_CODE", "HeaderBackColor","LightBlue")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "INVOICE", "HeaderBackColor","LightBlue")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "IVA16", "HeaderBackColor","LightBlue")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA4", "HeaderBackColor","LightBlue")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "SUBTOTAL", "HeaderBackColor","LightBlue")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA1066", "HeaderBackColor","LightBlue")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVAISR10",  "HeaderBackColor","LightBlue")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA6",  "HeaderBackColor","LightBlue")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA0125","HeaderBackColor","LightBlue")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "TOTAL",  "HeaderBackColor","LightBlue")
+
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "DATE_CHECK", "HeaderFontBold",True)
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "CHECK_NUM", "HeaderFontBold",True)
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RFC", "HeaderFontBold",True)
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "CURRENCY", "HeaderFontBold",True)
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "PROVEEDOR", "HeaderFontBold",True)
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "CHECK_NAME", "HeaderFontBold",True)
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "TAX_CODE", "HeaderFontBold",True)
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "INVOICE", "HeaderFontBold",True)
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "IVA16", "HeaderFontBold",True)
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA4", "HeaderFontBold",True)
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "SUBTOTAL", "HeaderFontBold",True)
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA1066", "HeaderFontBold",True)
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVAISR10",  "HeaderFontBold",True)
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA6",  "HeaderFontBold",True)
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA0125", "HeaderFontBold",True)
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "TOTAL",  "HeaderFontBold",True)
+
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "IVA16", "DisplayFormatType","NUMERIC")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "IVA16", "DisplayCustomNumeric","$###.00")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA4", "DisplayFormatType","NUMERIC")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA4", "DisplayCustomNumeric","$###.00")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "SUBTOTAL", "DisplayFormatType","NUMERIC")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "SUBTOTAL", "DisplayCustomNumeric","$###.00")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA1066", "DisplayFormatType","NUMERIC")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA1066", "DisplayCustomNumeric","$###.00")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVAISR10",  "DisplayFormatType","NUMERIC")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVAISR10",  "DisplayCustomNumeric","$###.00")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA6", "DisplayFormatType","NUMERIC")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA6", "DisplayCustomNumeric","$###.00")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA0125","DisplayFormatType","NUMERIC")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA0125","DisplayCustomNumeric","$###.00")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "DATE_CHECK", "DisplayCustomDatetime","g")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "TOTAL", "DisplayFormatType","NUMERIC")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "TOTAL", "DisplayCustomNumeric","$###.00")
+
+'"VisibleIndex","0")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "DATE_CHECK","VisibleIndex","0")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "CHECK_NUM","VisibleIndex","1")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RFC", "VisibleIndex", "2")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "CURRENCY", "VisibleIndex", "3")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "PROVEEDOR", "VisibleIndex","4")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "CHECK_NAME", "VisibleIndex","5")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "INVOICE", "VisibleIndex","6")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "TAX_CODE","VisibleIndex","7")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "SUBTOTAL", "VisibleIndex","8")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "IVA16", "VisibleIndex","9")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA4", "VisibleIndex","10")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA1066", "VisibleIndex","11")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVAISR10",  "VisibleIndex","12")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA6", "VisibleIndex","13")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "RET_IVA0125", "VisibleIndex","14")
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV", "TOTAL",  "VisibleIndex","15")
+
+Gui.F_PREDIOT.GsGridDIOT.SetColumnProperty("GLAPCheckDIOT_GV","DATE_CHECK","DisplayCustomDatetime","d")
+
+Gui.F_PREDIOT.GsGridDIOT.MainView("GLAPCheckDIOT_GV")
+
+Gui.F_SelectCheckDate..Visible(False)
+Gui.F_PREDIOT..Show
+Program.Sub.cmdLoad_Click.End
+
+Program.Sub.cmdExport_Click.Start
+V.Local.sFileExport.Declare
+V.Local.bExcel.Declare
+V.Local.bFileLocked.Declare
+V.Local.sMsg.Declare
+
+F.Automation.MSExcel.CheckPresence(V.Local.bExcel)
+
+		F.Intrinsic.Control.If(V.Local.bExcel)
+			F.Intrinsic.String.Build("{0}\GAB_6684_Export.xlsx",V.Caller.LocalGssTempDir,V.Local.sFileExport)
+			F.Intrinsic.File.IsFileLocked(V.Local.sFileExport,V.Local.bFileLocked)
+			F.Intrinsic.Control.If(V.Local.bFileLocked)
+				F.Intrinsic.String.Build("El archivo ya esta abierto. Cierre y exporte de nuevo.{0}File: {1}",V.Ambient.NewLine,V.Local.sFileExport,V.Local.sMsg)
+				F.Intrinsic.UI.Msgbox(V.Local.sMsg,"Archivo en uso")
+			F.Intrinsic.Control.Else
+				gui.F_PREDIOT.GsGridDIOT.Export(V.Local.sFileExport,"xlsx")
+				F.Intrinsic.Task.ShellExec(0,"",V.Local.sFileExport,"","",1)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Build("{0}\GAB_6684_Export.csv",V.Caller.LocalGssTempDir,V.Local.sFileExport)
+			F.Intrinsic.File.IsFileLocked(V.Local.sFileExport,V.Local.bFileLocked)
+			F.Intrinsic.Control.If(V.Local.bFileLocked)
+				F.Intrinsic.String.Build("El archivo ya esta abierto. Cierre y exporte de nuevo.{0}File: {1}",V.Ambient.NewLine,V.Local.sFileExport,V.Local.sMsg)
+				F.Intrinsic.UI.Msgbox(V.Local.sMsg,"Archivo en uso")
+			F.Intrinsic.Control.Else
+				gui.F_PREDIOT.GsGridDIOT.Export(V.Local.sFileExport,"csv")
+			F.Intrinsic.Control.EndIf
+			F.Intrinsic.Task.ShellExec(0,"",V.Local.sFileExport,"","",1)
+		F.Intrinsic.Control.EndIf
+		
+Program.Sub.cmdExport_Click.End
+
+Program.Sub.cmdExportTXT_Click.Start
+V.Local.sFileExport.Declare
+V.Local.bFileLocked.Declare
+V.Local.sMsg.Declare
+
+			F.Intrinsic.String.Build("{0}\GAB_6684_Export.TXT",V.Caller.LocalGssTempDir,V.Local.sFileExport)
+			F.Intrinsic.File.IsFileLocked(V.Local.sFileExport,V.Local.bFileLocked)
+			F.Intrinsic.Control.If(V.Local.bFileLocked)
+				F.Intrinsic.String.Build("El archivo ya esta abierto. Cierre y exporte de nuevo.{0}File: {1}",V.Ambient.NewLine,V.Local.sFileExport,V.Local.sMsg)
+				F.Intrinsic.UI.Msgbox(V.Local.sMsg,"Archivo en uso")
+			F.Intrinsic.Control.Else
+				gui.F_PREDIOT.GsGridDIOT.Export(V.Local.sFileExport,"txt")
+				F.Intrinsic.Task.ShellExec(0,"",V.Local.sFileExport,"","",1)
+			F.Intrinsic.Control.EndIf
+			
+Program.Sub.cmdExportTXT_Click.End
+
+
+'MANTENIMIENTO CUENTA RETENCION DIOT
+Program.Sub.LoadMantCRDIOT.Start
+	'load data if exists
+V.Local.sSQL.Declare(String)
+V.Local.sPO.Declare(String)
+
+
+'Load Existing Data from Custom Table GAB_6684_GLACCTS
+F.ODBC.Connection!conx.OpenRecordsetRO("rstLoadMCC","select * from GAB_6684_GLACCTS")
+F.Intrinsic.Control.If(V.ODBC.conx!rstLoadMCC.EOF,=,False)
+	gui.F_MantCRDIOT.txtIVA.Text(V.ODBC.conx!rstLoadMCC.FieldVal!IVA16)
+	gui.F_MantCRDIOT.txtIVA2.Text(V.ODBC.conx!rstLoadMCC.FieldVal!RET_IVA4)
+	gui.F_MantCRDIOT.txtIVA3.Text(V.ODBC.conx!rstLoadMCC.FieldVal!RET_IVA1066)
+	gui.F_MantCRDIOT.txtIVA4.Text(V.ODBC.conx!rstLoadMCC.FieldVal!RET_IVAISR10)
+	gui.F_MantCRDIOT.txtIVA5.Text(V.ODBC.conx!rstLoadMCC.FieldVal!RET_IVA6)
+	gui.F_MantCRDIOT.txtIVA6.Text(V.ODBC.conx!rstLoadMCC.FieldVal!RET_IVA0125)
+F.Intrinsic.Control.EndIf	
+gui.F_MantCRDIOT..Show	
+	
+Program.Sub.LoadMantCRDIOT.End
+
+Program.Sub.cmdSaveCC_Click.Start
+V.Local.sSQL.Declare
+
+F.ODBC.Connection!CONX.OpenLocalRecordsetRW("RST","SELECT * FROM GAB_6684_GLACCTS")
+F.Intrinsic.Control.If(v.ODBC.CONX!RST.EOF,=,True)
+	F.ODBC.CONX!RST.AddNew
+F.Intrinsic.Control.EndIf
+F.ODBC.CONX!RST.Set!IVA16(V.Screen.F_MantCRDIOT!txtIVA.Text)
+F.ODBC.CONX!RST.Set!RET_IVA4(V.Screen.F_MantCRDIOT!txtIVA2.Text)
+F.ODBC.CONX!RST.Set!RET_IVA1066(V.Screen.F_MantCRDIOT!txtIVA3.Text)
+F.ODBC.CONX!RST.Set!RET_IVAISR10(V.Screen.F_MantCRDIOT!txtIVA4.Text)
+F.ODBC.CONX!RST.Set!RET_IVA6(V.Screen.F_MantCRDIOT!txtIVA5.Text)
+F.ODBC.CONX!RST.Set!RET_IVA0125(V.Screen.F_MantCRDIOT!txtIVA6.Text)
+F.ODBC.CONX!RST.Update
+F.Intrinsic.UI.Msgbox("DATOS GUARDADOS")
+F.ODBC.CONX!RST.Close
+Program.Sub.cmdSaveCC_Click.End
+
+Program.Sub.cmdIVA_Click.Start
+v.Local.sRet.Declare(string)
+V.Local.sSQL.Declare(string)
+v.Local.sTemp.Declare(string)
+v.Local.sTitles.Declare(string)
+v.Local.iWidths.Declare(long)
+
+'Load Custom Browser from Custom Table CFDI_C_PAIS and save into form
+F.Intrinsic.String.Split("CTA CONTABLE *!*DESCRIPCION","*!*",v.local.sTitles)
+F.Intrinsic.String.Split("300*!*800","*!*",v.local.iWidths)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("SELECCIONE CUENTA CONTABLE DESDE EL CATALAGO DEL CUENTAS CONTABLES","conx","select GL_ACCOUNT,DESCR from GL_MASTER",v.Local.sTitles,v.Local.iWidths,v.Local.sRet)
+F.Intrinsic.Control.If(v.Local.sRet,"=","***CANCEL***")
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+	GUI.F_MantCRDIOT.txtIVA.Text(v.Local.sRet(0).Trime)
+F.Intrinsic.Control.EndIf
+Program.Sub.cmdIVA_Click.End
+
+Program.Sub.cmdIVA2_Click.Start
+v.Local.sRet.Declare(string)
+V.Local.sSQL.Declare(string)
+v.Local.sTemp.Declare(string)
+v.Local.sTitles.Declare(string)
+v.Local.iWidths.Declare(long)
+
+'Load Custom Browser from Custom Table CFDI_C_PAIS and save into form
+F.Intrinsic.String.Split("CTA CONTABLE *!*DESCRIPCION","*!*",v.local.sTitles)
+F.Intrinsic.String.Split("300*!*800","*!*",v.local.iWidths)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("SELECCIONE CUENTA CONTABLE DESDE EL CATALAGO DEL CUENTAS CONTABLES","conx","select GL_ACCOUNT,DESCR from GL_MASTER",v.Local.sTitles,v.Local.iWidths,v.Local.sRet)
+F.Intrinsic.Control.If(v.Local.sRet,"=","***CANCEL***")
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+	GUI.F_MantCRDIOT.txtIVA2.Text(v.Local.sRet(0).Trime)
+F.Intrinsic.Control.EndIf
+Program.Sub.cmdIVA2_Click.End
+
+Program.Sub.cmdIVA3_Click.Start
+v.Local.sRet.Declare(string)
+V.Local.sSQL.Declare(string)
+v.Local.sTemp.Declare(string)
+v.Local.sTitles.Declare(string)
+v.Local.iWidths.Declare(long)
+
+'Load Custom Browser from Custom Table CFDI_C_PAIS and save into form
+F.Intrinsic.String.Split("CTA CONTABLE *!*DESCRIPCION","*!*",v.local.sTitles)
+F.Intrinsic.String.Split("300*!*800","*!*",v.local.iWidths)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("SELECCIONE CUENTA CONTABLE DESDE EL CATALAGO DEL CUENTAS CONTABLES","conx","select GL_ACCOUNT,DESCR from GL_MASTER",v.Local.sTitles,v.Local.iWidths,v.Local.sRet)
+F.Intrinsic.Control.If(v.Local.sRet,"=","***CANCEL***")
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+	GUI.F_MantCRDIOT.txtIVA3.Text(v.Local.sRet(0).Trime)
+F.Intrinsic.Control.EndIf
+Program.Sub.cmdIVA3_Click.End
+
+Program.Sub.cmdIVA4_Click.Start
+v.Local.sRet.Declare(string)
+V.Local.sSQL.Declare(string)
+v.Local.sTemp.Declare(string)
+v.Local.sTitles.Declare(string)
+v.Local.iWidths.Declare(long)
+
+'Load Custom Browser from Custom Table CFDI_C_PAIS and save into form
+F.Intrinsic.String.Split("CTA CONTABLE *!*DESCRIPCION","*!*",v.local.sTitles)
+F.Intrinsic.String.Split("300*!*800","*!*",v.local.iWidths)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("SELECCIONE CUENTA CONTABLE DESDE EL CATALAGO DEL CUENTAS CONTABLES","conx","select GL_ACCOUNT,DESCR from GL_MASTER",v.Local.sTitles,v.Local.iWidths,v.Local.sRet)
+F.Intrinsic.Control.If(v.Local.sRet,"=","***CANCEL***")
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+	GUI.F_MantCRDIOT.txtIVA4.Text(v.Local.sRet(0).Trime)
+F.Intrinsic.Control.EndIf
+Program.Sub.cmdIVA4_Click.End
+
+Program.Sub.cmdIVA5_Click.Start
+v.Local.sRet.Declare(string)
+V.Local.sSQL.Declare(string)
+v.Local.sTemp.Declare(string)
+v.Local.sTitles.Declare(string)
+v.Local.iWidths.Declare(long)
+
+'Load Custom Browser from Custom Table CFDI_C_PAIS and save into form
+F.Intrinsic.String.Split("CTA CONTABLE *!*DESCRIPCION","*!*",v.local.sTitles)
+F.Intrinsic.String.Split("300*!*800","*!*",v.local.iWidths)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("SELECCIONE CUENTA CONTABLE DESDE EL CATALAGO DEL CUENTAS CONTABLES","conx","select GL_ACCOUNT,DESCR from GL_MASTER",v.Local.sTitles,v.Local.iWidths,v.Local.sRet)
+F.Intrinsic.Control.If(v.Local.sRet,"=","***CANCEL***")
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+	GUI.F_MantCRDIOT.txtIVA5.Text(v.Local.sRet(0).Trime)
+F.Intrinsic.Control.EndIf
+Program.Sub.cmdIVA5_Click.End
+
+Program.Sub.cmdIVA6_Click.Start
+v.Local.sRet.Declare(string)
+V.Local.sSQL.Declare(string)
+v.Local.sTemp.Declare(string)
+v.Local.sTitles.Declare(string)
+v.Local.iWidths.Declare(long)
+
+'Load Custom Browser from Custom Table CFDI_C_PAIS and save into form
+F.Intrinsic.String.Split("CTA CONTABLE *!*DESCRIPCION","*!*",v.local.sTitles)
+F.Intrinsic.String.Split("300*!*800","*!*",v.local.iWidths)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("SELECCIONE CUENTA CONTABLE DESDE EL CATALAGO DEL CUENTAS CONTABLES","conx","select GL_ACCOUNT,DESCR from GL_MASTER",v.Local.sTitles,v.Local.iWidths,v.Local.sRet)
+F.Intrinsic.Control.If(v.Local.sRet,"=","***CANCEL***")
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+	GUI.F_MantCRDIOT.txtIVA6.Text(v.Local.sRet(0).Trime)
+F.Intrinsic.Control.EndIf
+Program.Sub.cmdIVA6_Click.End
+
+
+'UNLOADS
+Program.Sub.UNLOAD.Start
+F.Intrinsic.Control.Try
+	
+	F.ODBC.Connection!CONX.Close
+	F.Intrinsic.Control.End
+
+		
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(Unload)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+
+Program.Sub.UNLOAD.End
+
+Program.Sub.F_PREDIOT_UnLoad.Start
+Gui.F_SelectCheckDate..Enabled(True)
+Gui.F_PREDIOT..Visible(False)
+Gui.F_SelectCheckDate..Show
+Program.Sub.F_PREDIOT_UnLoad.End
+
+Program.Sub.Comments.Start
+${$5$}$20.1.8543.32295$}$1
+${$6$}$acardenas$}$20230804162722979$}$WOCvtxu6/EPnAvQJE4I+q+v5cNawXCaAPFm5JNb/FRuCGR4YrIMmcDTBoP7yhefbx16oaHw40STUNAtsATx6Tg==
+Program.Sub.Comments.End
